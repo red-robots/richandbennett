@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class("template-page"); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("template-sitemap"); ?>>
     <div class="wrapper cap">
         <div class="wrapper">
             <header>
@@ -17,6 +17,7 @@
             </header>
             <div class="copy">
                 <?php the_content();?>
+                <?php wp_nav_menu( array( 'theme_location' => 'sitemap' ) ); ?>	
             </div><!--.copy-->
         </div><!--.wrapper-->
     </div><!--.wrapper-->

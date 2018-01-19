@@ -1381,15 +1381,15 @@ html[xmlns] .flexslider .slides{display:block}
 .copy h1{font-size:30px}
 .copy h2{font-size:25px}
 .copy h3{font-size:20px}
-.copy>ul,.copy>ol{padding:0;margin:0 0 20px 20px;font-size:inherit}
-.copy>ul li,.copy>ol li{margin:0;font-size:inherit;padding:0;list-style-type:none;text-indent:-14px}
-.copy>ul li:before,.copy>ol li:before{content:"\25A0";color:#404040;margin-right:5px}
-.copy>ul li a,.copy>ol li a{cursor:pointer}
-.copy>ul li a:hover,.copy>ol li a:hover{color:#404040}
-.copy>ul li ul.sub-menu,.copy>ol li ul.sub-menu{margin:0}
+.copy ul,.copy ol{padding:0;margin:0 0 20px 20px;font-size:inherit}
+.copy ul li,.copy ol li{margin:0;font-size:inherit;padding:0;list-style-type:disc}
+.copy ul li a,.copy ol li a{cursor:pointer;text-decoration:none}
+.copy ul li a:hover,.copy ol li a:hover{color:#404040}
+.copy ol li{list-style-type:decimal}
 #masthead{background-color:black;color:white}
-#masthead>.wrapper{padding:20px 0 0 0}
-@media screen and (min-width:350px){#masthead>.wrapper{padding:30px 0 0 0}
+#masthead.index>.wrapper{padding-bottom:0}
+#masthead>.wrapper{padding:20px 0}
+@media screen and (min-width:350px){#masthead>.wrapper{padding:30px 0}
 }#masthead>.wrapper h1.logo{margin:0 auto;width:80%}
 @media screen and (min-width:350px){#masthead>.wrapper h1.logo{width:20%;max-width:150px;margin:0}
 }#masthead>.wrapper h1.logo a{display:block}
@@ -1412,10 +1412,10 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.template-index>.row-1{padding:8% 0 0 0;font-size:25px}
 }.template-index>.row-2{font-size:25px;background-color:black;color:white;font-weight:700;text-transform:uppercase;padding:0 0 30px 0}
 @media screen and (min-width:600px){.template-index>.row-2{font-size:40px;padding:0 0 5% 0}
-}.template-index>.row-3{padding:1px 0 150px 0;background:lightgrey;background:-webkit-linear-gradient(bottom,black,white);background:-webkit-linear-gradient(top,black,white);background:linear-gradient(to bottom,black,white)}
+}.template-index>.row-3{padding:1px 0 100% 0;background:lightgrey;background:-webkit-linear-gradient(bottom,black,white);background:-webkit-linear-gradient(top,black,white);background:linear-gradient(to bottom,black,white)}
 @media screen and (min-width:600px){.template-index>.row-3{padding:1px 0 40% 0}
 }.template-index>.row-3>.wrapper>.box{vertical-align:top;margin:20px 0 0 0}
-@media screen and (min-width:350px){.template-index>.row-3>.wrapper>.box{display:inline-block;margin:0 2% 4% 2%;width:47%}
+@media screen and (min-width:350px){.template-index>.row-3>.wrapper>.box{display:inline-block;margin:0 4% 8% 4%;width:41%}
 }@media screen and (min-width:600px){.template-index>.row-3>.wrapper>.box{display:inline-block;margin:0 1% 2% 1%;width:30.66667%}
 }@media screen and (min-width:1200px){.template-index>.row-3>.wrapper>.box{width:17.6%;margin:0 1.5%;float:left}
 }@media screen and (min-width:350px) and (max-width:599px){.template-index>.row-3>.wrapper>.box:nth-child(even){margin-right:0}
@@ -1436,6 +1436,13 @@ html[xmlns] .flexslider .slides{display:block}
 .template-index>.row-3>.wrapper>.box a img{display:block;width:100px;margin:0 auto 10px auto}
 .template-index>.row-3>.wrapper>.box a header{text-align:center;margin:auto 0 0 0}
 .template-index>.row-3>.wrapper>.box a header h2{margin:0;color:inherit}
+.template-page>.wrapper,.template-sitemap>.wrapper,.error-404>.wrapper{padding:20px 0 150px 0}
+@media screen and (min-width:600px){.template-page>.wrapper,.template-sitemap>.wrapper,.error-404>.wrapper{padding:20px 0 20% 0}
+}@media screen and (min-width:600px){.template-page>.wrapper>.wrapper,.template-sitemap>.wrapper>.wrapper,.error-404>.wrapper>.wrapper{width:70%;margin:0 auto}
+}.template-page>.wrapper>.wrapper>header,.template-sitemap>.wrapper>.wrapper>header,.error-404>.wrapper>.wrapper>header{text-align:center}
+.template-page>.wrapper>.wrapper>header h1,.template-sitemap>.wrapper>.wrapper>header h1,.error-404>.wrapper>.wrapper>header h1{margin:0;font-size:25px}
+@media screen and (min-width:600px){.template-page>.wrapper>.wrapper>header h1,.template-sitemap>.wrapper>.wrapper>header h1,.error-404>.wrapper>.wrapper>header h1{font-size:40px}
+}.template-page>.wrapper>.wrapper .copy,.template-sitemap>.wrapper>.wrapper .copy,.error-404>.wrapper>.wrapper .copy{margin:20px 0 0 0}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

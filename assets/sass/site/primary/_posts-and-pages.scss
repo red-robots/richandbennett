@@ -25,7 +25,7 @@
         }
     }
     >.row-3 {
-        padding: 1px 0 150px 0;
+        padding: 1px 0 100% 0;
         background: lightgrey; /* For browsers that do not support gradients */
         background: -webkit-linear-gradient(bottom, black , white ); /* For Safari 5.1 to 6.0 */
         background: -o-linear-gradient(bottom, black , white); /* For Opera 11.1 to 12.0 */
@@ -40,8 +40,8 @@
                 margin: 20px 0 0 0;
                 @media screen and (min-width: $tinywidth){
                     display: inline-block;
-                    margin: 0 2% 4% 2%;
-                    width: 1/2*94%;
+                    margin: 0 4% 8% 4%;
+                    width: 1/2*82%;
                 }
                 @media screen and (min-width: $tabwidth){
                     display: inline-block;
@@ -137,6 +137,33 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+.template-page, .template-sitemap, .error-404 {
+    >.wrapper {
+        padding: 20px 0 150px 0;
+        @media screen and (min-width: $tabwidth){
+            padding: 20px 0 20% 0;
+        }
+        >.wrapper {
+            @media screen and (min-width: $tabwidth){
+                width: 70%;
+                margin: 0 auto;
+            }
+            >header {
+                text-align: center;
+                h1 {
+                    margin: 0;
+                    font-size: 25px;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 40px;
+                    }
+                }
+            }
+            .copy {
+                margin: 20px 0 0 0;
             }
         }
     }

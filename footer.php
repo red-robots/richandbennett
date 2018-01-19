@@ -49,7 +49,7 @@
 				</div><!--.row-2-->
 			<?php endif;?>
 			<nav class="row-3">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>	
+				<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>	
 			</nav>
 		</div><!--.wrapper-->
 	</footer><!-- #colophon -->
