@@ -3,8 +3,8 @@
 	padding-left: 20px !important;
 	margin: 0 auto;
 	@media screen and (min-width: $midwidth){
-		padding-right: 2% !important;
-		padding-left: 2% !important;
+		padding-right: 4% !important;
+		padding-left: 4% !important;
 	}
 }
 .clear-bottom {
@@ -89,9 +89,18 @@
 	background-color: black;
 	color: white;
 	>.wrapper {
+			padding: 20px 0 0 0;
+			@media screen and (min-width: $tinywidth){
+				padding: 30px 0 0 0;
+			}
 		h1.logo {
-			margin: 0;
-			width: 20%;
+			margin: 0 auto;
+			width: 80%;
+			@media screen and (min-width: $tinywidth){
+				width: 20%;
+				max-width: 150px;
+				margin: 0;
+			}
 			a {
 				display: block;
 				img {
@@ -106,26 +115,59 @@
 #colophon {
 	background-color: black;
 	color: white;
+	position: relative;
+	>img.blocks {
+		width: 100%;
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		width: 100%;
+		margin: 0 0 -10px 0;
+	}
 	>.wrapper {
+		padding: 40px 0 20px 0;
+		text-align: center;
 		>.row-1 {
 			a {
-
+				display: inline-block;
+				font-size: 35px;
+				margin: 0 10px;
+				text-decoration: none;
+				color: white;
 			}
 		}
 		>.row-2 {
+			padding: 20px 0 0 0;
+			@media screen and (min-width: $tinywidth){
+				padding: 5% 0 0 0;
+			}
 			>.row-1 {
-
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 1.2;
 			}
 			>.row-2 {
-
+				font-size: 18px;
+				line-height: 1.2;
 			}
 		}
 		>.row-3 {
+			padding: 20px 0 0 0;
+			@media screen and (min-width: $tinywidth){
+				padding: 5% 0 0 0;
+			}
 			>div {
 				ul {
+					margin: 0;
+					padding: 0;
 					li {
+						display: inline-block;
+						list-style-type: none;
+						margin: 0 3px;
 						a {
-
+							text-decoration: none;
+							color: white;
+							font-size: 12px;
 						}
 					}
 				}
