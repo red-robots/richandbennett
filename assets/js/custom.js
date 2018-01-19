@@ -66,27 +66,6 @@ jQuery(document).ready(function ($) {
  		 });
 	});
 
-	/*
-	*
-	*	Smooth Scroll to Anchor
-	*
-	------------------------------------*/
-	 $('a').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	    }, 500);
-	    return false;
-	});
-
-	/*
-	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
-	
 	
 	/*
 	*
@@ -101,5 +80,15 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	new WOW().init();
+
+
+	var square = function(){
+		var $els = $('.box.square');
+		$els.each(function(index,el){
+			$(el).height($(el).width());
+		});
+	}	
+	square();
+	$(window).resize(square);
 
 });// END #####################################    END

@@ -1,11 +1,10 @@
 .cap {
-	max-width: 1500px;
 	padding-right: 20px !important;
 	padding-left: 20px !important;
 	margin: 0 auto;
 	@media screen and (min-width: $midwidth){
-		padding-right: 4% !important;
-		padding-left: 4% !important;
+		padding-right: 2% !important;
+		padding-left: 2% !important;
 	}
 }
 .clear-bottom {
@@ -83,5 +82,54 @@
 				margin: 0;
 			}
 	  }
+	}
+}
+
+#masthead {
+	background-color: black;
+	color: white;
+	>.wrapper {
+		h1.logo {
+			margin: 0;
+			width: 20%;
+			a {
+				display: block;
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+#colophon {
+	background-color: black;
+	color: white;
+	>.wrapper {
+		>.row-1 {
+			a {
+
+			}
+		}
+		>.row-2 {
+			>.row-1 {
+
+			}
+			>.row-2 {
+
+			}
+		}
+		>.row-3 {
+			>div {
+				ul {
+					li {
+						a {
+
+						}
+					}
+				}
+			}
+		}
 	}
 }

@@ -1,0 +1,113 @@
+.template-index {
+    background: lightgrey; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(bottom, black , white ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, black , white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, black ,white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, black ,white); /* Standard syntax */
+    >.wrapper {
+        text-align: center;
+        >.box {
+            vertical-align: top;
+            margin: 20px 0 0 0;
+            @media screen and (min-width: $tinywidth){
+                display: inline-block;
+                margin: 0 2% 4% 2%;
+                width: 1/2*94%;
+            }
+            @media screen and (min-width: $tabwidth){
+                display: inline-block;
+                margin: 0 1% 2% 1%;
+                width: 1/3*92%;
+            }
+            @media screen and (min-width: $deskwidth){
+                width: 1/5*92%;
+                margin: 0 1%;
+                float: left;
+            }
+            &:nth-child(even){
+                @media screen and (min-width: $tinywidth) and (max-width: $tabwidth - 1px){
+                    margin-right: 0;
+                }
+            }
+            &:nth-child(odd){
+                @media screen and (min-width: $tinywidth) and (max-width: $tabwidth - 1px){
+                    margin-left: 0;
+                }
+            }
+            &.first {
+                @media screen and (min-width: $deskwidth){
+                    margin-left: 0;
+                }
+            }
+            &.last {
+                @media screen and (min-width: $deskwidth){
+                    margin-right: 0;
+                }
+            }
+            &.st-pats {
+                color: $color__rb-green;
+                border: 4px solid $color__rb-green;
+                a {
+                    border: 4px solid $color__rb-dark-green;
+                }
+            }
+            &.halloween {
+                color: $color__rb-orange;
+                border: 4px solid $color__rb-orange;
+                a {
+                    border: 4px solid $color__rb-dark-orange;
+                }
+
+            }
+            &.nye {
+                color: $color__rb-cream;
+                border: 4px solid $color__rb-cream;
+                a {
+                    border: 4px solid white;
+                }
+
+            }
+            &.americrawl {
+                color: $color__rb-red;
+                border: 4px solid $color__rb-red;
+                a {
+                    border: 4px solid white;
+                }
+
+            }
+            &.tubing {
+                color: $color__rb-blue;
+                border: 4px solid $color__rb-blue;
+                a {
+                    border: 4px solid $color__rb-dark-blue;
+                }
+
+            }
+            a {
+                display: block;
+                color: inherit;
+                text-decoration: none;
+                height: 100%;
+                padding: 10px 20px 30px 20px;
+                @include flexbox();
+                @include flexbox-justify(stretch);
+                @include flexbox-align-items(stretch);
+                @include flexbox-align-content(stretch);
+                @include flexbox-direction(column);
+                img {
+                    display: block;
+                    width: 100px;
+                    margin: 0 auto 10px auto;
+                }
+                header {
+                    text-align: center;
+                    margin: auto 0 0 0;
+                    h2 {
+                        margin: 0;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+}

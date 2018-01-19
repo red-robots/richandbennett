@@ -12,14 +12,14 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header("index"); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
 			/* Start the Loop */
-			$post = get_post();
+			$post = get_post(5);
 			if ( $post ) : 
 				setup_postdata($post);
 
