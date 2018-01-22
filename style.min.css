@@ -16,7 +16,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*//*!
+*/@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700");/*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.0
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -1233,7 +1233,7 @@ optgroup{font-weight:bold}
 table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}
 button:focus{outline:0}
-body,button,input,select,textarea{color:#404040;font-family:sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
+body,button,input,select,textarea{color:#404040;font-family:"Roboto Condensed",sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
 .entry-content h1{font-size:30px}
 p{margin-bottom:1.5em}
@@ -1395,7 +1395,7 @@ html[xmlns] .flexslider .slides{display:block}
 }#masthead>.wrapper h1.logo a{display:block}
 #masthead>.wrapper h1.logo a img{display:block;width:100%}
 #colophon{background-color:black;color:white;position:relative}
-#colophon>img.blocks{width:100%;position:absolute;bottom:100%;left:0;width:100%;margin:0 0 -10px 0}
+#colophon>img.blocks{width:100%;position:absolute;bottom:100%;left:0;width:100%;margin:0 0 -12px 0}
 #colophon>.wrapper{padding:40px 0 20px 0;text-align:center}
 #colophon>.wrapper>.row-1 a{display:inline-block;font-size:35px;margin:0 10px;text-decoration:none;color:white}
 #colophon>.wrapper>.row-2{padding:20px 0 0 0}
@@ -1412,9 +1412,11 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){.template-index>.row-1{padding:8% 0 0 0;font-size:25px}
 }.template-index>.row-2{font-size:25px;background-color:black;color:white;font-weight:700;text-transform:uppercase;padding:0 0 30px 0}
 @media screen and (min-width:600px){.template-index>.row-2{font-size:40px;padding:0 0 5% 0}
-}.template-index>.row-3{padding:1px 0 100% 0;background:lightgrey;background:-webkit-linear-gradient(bottom,black,white);background:-webkit-linear-gradient(top,black,white);background:linear-gradient(to bottom,black,white)}
+}.template-index>.row-3{position:relative;padding:1px 0 100% 0}
 @media screen and (min-width:600px){.template-index>.row-3{padding:1px 0 40% 0}
-}.template-index>.row-3>.wrapper>.box{vertical-align:top;margin:20px 0 0 0}
+}.template-index>.row-3:before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;background:lightgrey;background:-webkit-linear-gradient(bottom,black,transparent);background:-webkit-linear-gradient(top,black,transparent);background:linear-gradient(to bottom,black,transparent)}
+.template-index>.row-3>img{z-index:-2;position:absolute;bottom:0;left:0;width:100%;height:auto}
+.template-index>.row-3>.wrapper>.box{vertical-align:top;margin:20px 0 0 0}
 @media screen and (min-width:350px){.template-index>.row-3>.wrapper>.box{display:inline-block;margin:0 4% 8% 4%;width:41%}
 }@media screen and (min-width:600px){.template-index>.row-3>.wrapper>.box{display:inline-block;margin:0 1% 2% 1%;width:30.66667%}
 }@media screen and (min-width:1200px){.template-index>.row-3>.wrapper>.box{width:17.6%;margin:0 1.5%;float:left}
@@ -1422,20 +1424,8 @@ html[xmlns] .flexslider .slides{display:block}
 }@media screen and (min-width:350px) and (max-width:599px){.template-index>.row-3>.wrapper>.box:nth-child(odd){margin-left:0}
 }@media screen and (min-width:1200px){.template-index>.row-3>.wrapper>.box.first{margin-left:0}
 }@media screen and (min-width:1200px){.template-index>.row-3>.wrapper>.box.last{margin-right:0}
-}.template-index>.row-3>.wrapper>.box.st-pats{color:#04a96d;border:4px solid #04a96d}
-.template-index>.row-3>.wrapper>.box.st-pats a{border:4px solid #055e3c}
-.template-index>.row-3>.wrapper>.box.halloween{color:#fd8906;border:4px solid #fd8906}
-.template-index>.row-3>.wrapper>.box.halloween a{border:4px solid #aa5705}
-.template-index>.row-3>.wrapper>.box.nye{color:#f9e9b9;border:4px solid #f9e9b9}
-.template-index>.row-3>.wrapper>.box.nye a{border:4px solid white}
-.template-index>.row-3>.wrapper>.box.americrawl{color:#b22234;border:4px solid #b22234}
-.template-index>.row-3>.wrapper>.box.americrawl a{border:4px solid white}
-.template-index>.row-3>.wrapper>.box.tubing{color:#0c99ef;border:4px solid #0c99ef}
-.template-index>.row-3>.wrapper>.box.tubing a{border:4px solid #045c87}
-.template-index>.row-3>.wrapper>.box a{display:block;color:inherit;text-decoration:none;height:100%;padding:10px 20px 30px 20px;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:stretch;-webkit-box-pack:stretch;-ms-flex-pack:stretch;justify-content:stretch;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
-.template-index>.row-3>.wrapper>.box a img{display:block;width:100px;margin:0 auto 10px auto}
-.template-index>.row-3>.wrapper>.box a header{text-align:center;margin:auto 0 0 0}
-.template-index>.row-3>.wrapper>.box a header h2{margin:0;color:inherit}
+}.template-index>.row-3>.wrapper>.box a{display:block;color:inherit;text-decoration:none}
+.template-index>.row-3>.wrapper>.box a img{display:block;width:100%}
 .template-page>.wrapper,.template-sitemap>.wrapper,.error-404>.wrapper{padding:20px 0 150px 0}
 @media screen and (min-width:600px){.template-page>.wrapper,.template-sitemap>.wrapper,.error-404>.wrapper{padding:20px 0 20% 0}
 }@media screen and (min-width:600px){.template-page>.wrapper>.wrapper,.template-sitemap>.wrapper>.wrapper,.error-404>.wrapper>.wrapper{width:70%;margin:0 auto}

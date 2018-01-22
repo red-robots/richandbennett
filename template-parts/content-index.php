@@ -26,35 +26,31 @@
         </div><!--.row-2-->
     <?php endif;?>
     <div class="row-3">
+        <img src="<?php echo get_template_directory_uri()."/images/city.jpg";?>" alt="Charlotte Skyline">
         <div class="wrapper cap clear-bottom">
-            <div class="box st-pats first square">
+            <div class="box st-pats first">
                 <a href="<?php echo get_permalink(7);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/clover.png";?>" alt="clover">
-                    <header><h2><?php echo get_the_title(7);?></h2></header>
+                    <img src="<?php echo get_template_directory_uri()."/images/icon-st-pats.svg";?>" alt="clover">
                 </a>
             </div><!--.box-->
-            <div class="box americrawl square">
+            <div class="box americrawl">
                 <a href="<?php echo get_permalink(9);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/star.png";?>" alt="star">
-                    <header><h2><?php echo get_the_title(9);?></h2></header>
+                    <img src="<?php echo get_template_directory_uri()."/images/icon-americrawl.svg";?>" alt="star">
                 </a>
             </div><!--.box-->
-            <div class="box nye square">
+            <div class="box nye">
                 <a href="<?php echo get_permalink(38);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/glass.png";?>" alt="glass">
-                    <header><h2><?php echo get_the_title(38);?></h2></header>
+                    <img src="<?php echo get_template_directory_uri()."/images/icon-nye.svg";?>" alt="glass">
                 </a>
             </div><!--.box-->
-            <div class="box halloween square">
+            <div class="box halloween">
                 <a href="<?php echo get_permalink(40);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/pumpkin.png";?>" alt="pumpkin">
-                    <header><h2><?php echo get_the_title(40);?></h2></header>
+                    <img src="<?php echo get_template_directory_uri()."/images/icon-halloween.svg";?>" alt="pumpkin">
                 </a>
             </div><!--.box-->
-            <div class="box tubing last square">
+            <div class="box tubing last">
                 <a href="<?php echo get_permalink(11);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/tubing.png";?>" alt="tubing">
-                    <header><h2><?php echo get_the_title(11);?></h2></header>
+                    <img src="<?php echo get_template_directory_uri()."/images/icon-tubing.svg";?>" alt="tubing">
                 </a>
             </div><!--.box-->   
         </div><!--.wrapper-->

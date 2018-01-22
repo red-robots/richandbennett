@@ -25,14 +25,32 @@
         }
     }
     >.row-3 {
+        position: relative;
         padding: 1px 0 100% 0;
-        background: lightgrey; /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(bottom, black , white ); /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(bottom, black , white); /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(bottom, black ,white); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(to bottom, black ,white); /* Standard syntax */
         @media screen and (min-width: $tabwidth){
             padding: 1px 0 40% 0;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: lightgrey; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(bottom, black , transparent ); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(bottom, black , transparent); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(bottom, black ,transparent); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to bottom, black ,transparent); /* Standard syntax */
+        }
+        >img {
+            z-index: -2;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
         }
         >.wrapper {
             >.box {
@@ -73,69 +91,16 @@
                         margin-right: 0;
                     }
                 }
-                &.st-pats {
-                    color: $color__rb-green;
-                    border: 4px solid $color__rb-green;
-                    a {
-                        border: 4px solid $color__rb-dark-green;
-                    }
-                }
-                &.halloween {
-                    color: $color__rb-orange;
-                    border: 4px solid $color__rb-orange;
-                    a {
-                        border: 4px solid $color__rb-dark-orange;
-                    }
-
-                }
-                &.nye {
-                    color: $color__rb-cream;
-                    border: 4px solid $color__rb-cream;
-                    a {
-                        border: 4px solid white;
-                    }
-
-                }
-                &.americrawl {
-                    color: $color__rb-red;
-                    border: 4px solid $color__rb-red;
-                    a {
-                        border: 4px solid white;
-                    }
-
-                }
-                &.tubing {
-                    color: $color__rb-blue;
-                    border: 4px solid $color__rb-blue;
-                    a {
-                        border: 4px solid $color__rb-dark-blue;
-                    }
-
-                }
+                
                 a {
                     display: block;
                     color: inherit;
                     text-decoration: none;
-                    height: 100%;
-                    padding: 10px 20px 30px 20px;
-                    @include flexbox();
-                    @include flexbox-justify(stretch);
-                    @include flexbox-align-items(stretch);
-                    @include flexbox-align-content(stretch);
-                    @include flexbox-direction(column);
                     img {
                         display: block;
-                        width: 100px;
-                        margin: 0 auto 10px auto;
+                        width: 100%;
                     }
-                    header {
-                        text-align: center;
-                        margin: auto 0 0 0;
-                        h2 {
-                            margin: 0;
-                            color: inherit;
-                        }
-                    }
+                    
                 }
             }
         }
