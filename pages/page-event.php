@@ -15,7 +15,7 @@ get_header(); ?>
 			<?php
 			if ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'sitemap' );
+				get_template_part( 'template-parts/content', 'event' );
 
 			endif; // End of the loop.
 			?>

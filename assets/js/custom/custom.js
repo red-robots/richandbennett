@@ -81,14 +81,17 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	new WOW().init();
 
-
-	var square = function(){
-		var $els = $('.box.square');
-		$els.each(function(index,el){
-			$(el).height($(el).width());
-		});
-	}	
-	square();
-	$(window).resize(square);
+	$('.question').click(function() {
+		var $this = $(this);
+		var $parent = $this.parent().parent('.row').eq(0);
+		$this.next('.answer').slideToggle(500);
+		$parent.toggleClass('close');
+	});
+	$('.row .fa').click(function() {
+		var $this = $(this);
+		var $parent = $this.parent('.row').eq(0);
+		$parent.find('.question').next('.answer').slideToggle(500);
+		$parent.toggleClass('close');
+	});
 
 });// END #####################################    END

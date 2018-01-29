@@ -133,3 +133,335 @@
         }
     }
 }
+.template-event {
+    >.row-1 {
+        >.wrapper {
+            text-align: center;
+            padding: 40px 0 20px 0;
+            @media screen and (min-width: $tabwidth){
+                padding: 5% 0 20px 0;
+            }
+            >.wrapper {
+                @media screen and (min-width: $tabwidth){
+                    padding: 0 5%;
+                }
+                header {
+                    .name {
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin: 0 0 10px 0;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 35px;
+                        }
+                    }
+                    h1 {
+                        font-size: 35px;
+                        line-height: 1;
+                        margin: 0 0 20px 0;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 50px;
+                        }
+                    }
+                    .date {
+                        font-size: 35px;
+                        line-height: 1;
+                        font-weight: 700;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 50px;
+                        }
+                    }
+                }
+                .copy {
+                    margin: 40px 0 0 0;
+                    @media screen and (min-width: $tabwidth){
+                        margin: 5% auto 0 auto;
+                        text-align: left;
+                        width: 70%;
+                    }
+                }
+                a.button {
+                    display: inline-block;
+                    padding: 10px 50px;
+                    text-decoration: none;
+                    background-color: black;
+                    border: 4px solid black;
+                    border-radius: 900px;
+                    color: white;
+                    margin: 30px 0 0 0;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 700;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 25px;
+                        margin: 4% 0 0 0;
+                    }
+                    &:hover {
+                        text-decoration: none;
+                        color: black;
+                        background-color: transparent;
+                    }
+
+                }
+                .social {
+                    margin: 30px 0 0 0;
+                    @media screen and (min-width: $tabwidth){
+                        margin: 4% 0 0 0;
+                    }
+                    a {
+                        display: inline-block;
+                        font-size: 35px;
+                        margin: 0 10px;
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    >.row-2 {
+        background-color: lightgrey;
+        >.wrapper {
+            padding: 40px 0;
+            @media screen and (min-width: $tabwidth){
+                padding: 5% 0 1px 0;
+            }
+            @media screen and (min-width: $deskwidth){
+                padding: 5% 0 2% 0;
+            }
+            >.wrapper {
+                @media screen and (min-width: $tabwidth){
+                    padding: 0 5%;
+                }
+                >header {
+                    text-align: center;
+                    padding: 0 0 40px 0;
+                    @media screen and (min-width: $tabwidth){
+                        padding: 0 0 5% 0;
+                    }
+                    h2 {
+                        text-transform: uppercase;
+                        margin: 0;
+                        font-size: 20px;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 25px;
+                        }
+                    }
+                }
+                >.blocks {
+                    .block {
+                        margin: 20px 0 0 0;
+                        @media screen and (min-width: $tabwidth){
+                            width: 1/2*92%;
+                            float: left;
+                            margin: 0 4% 8% 4%;
+                        }
+                        @media screen and (min-width: $deskwidth){
+                            width: 1/4*88%;
+                            margin: 0 2% 4% 2%;
+                        }
+                        &:nth-child(odd) {
+                            @media screen and (min-width: $tabwidth) and (max-width: $deskwidth - 1px){
+                                margin-left: 0;
+                            }
+                        }
+                        &:nth-child(even) {
+                            @media screen and (min-width: $tabwidth) and (max-width: $deskwidth - 1px){
+                                margin-right: 0;
+                            }
+                        }
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        &.first {
+                            margin-left: 0;
+                        }
+                        &.last {
+                            margin-right: 0;
+                        }
+                        a {
+                            display: block;
+                            text-decoration: none;
+                        }
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    >.row-3 {
+        >.wrapper {
+            padding: 40px 0;
+            @media screen and (min-width: $tabwidth){
+                padding: 5% 0;
+            }
+            >.wrapper {
+                @media screen and (min-width: $tabwidth){
+                    padding: 0 5%;
+                }
+                >header {
+                    text-align: center;
+                    padding: 0 0 40px 0;
+                    @media screen and (min-width: $tabwidth){
+                        padding: 0 0 5% 0;
+                    }
+                    h2 {
+                        text-transform: uppercase;
+                        margin: 0;
+                        font-size: 20px;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 25px;
+                        }
+                    }
+                }
+                >.faq {
+                    .row {
+                        margin: 0 0 20px 0;
+                        .fa {
+                            float: left;
+                            cursor: pointer;
+                            font-size: 35px;
+                            color: lightgrey;
+                            margin: -5px 20px 0 0;
+                            line-height: 1;
+                            vertical-align: top;
+                            display: block;
+                            width: 15px;
+                            @media screen and (min-width: $tabwidth){
+                                margin: -15px 20px 0 0;
+                                font-size: 65px;
+                                width: 40px;
+                            }
+                        }
+                        .fa-caret-down {
+                            display: none;
+                        }
+                        &.close {
+                            .fa-caret-down {
+                                display: block;
+                            }
+                            .fa-caret-right {
+                                display: none;
+                            }
+                        }
+                        >.wrapper {
+                            width: calc(100% - 35px);
+                            float: left;
+                            @media screen and (min-width: $tabwidth){
+                                width: calc(100% - 60px);
+                            }
+                            .question {
+                                font-weight: 700;
+                                cursor: pointer;
+                                font-size: 20px;
+                                @media screen and (min-width: $tabwidth){
+                                    font-size: 25px;
+                                }
+                            }
+                            .answer {
+                                display: none;
+                                font-size: 16px;
+                                margin: 20px 0;
+                                @media screen and (min-width: $tabwidth){
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    >.row-4 {
+        background-color: lightgrey;
+        >.wrapper {
+            padding: 40px 0 100px 0;
+            @media screen and (min-width: $tabwidth){
+                padding: 5% 0 7% 0;
+            }
+            @media screen and (min-width: $deskwidth){
+                padding: 5% 0 11% 0;
+            }
+            >.wrapper {
+                @media screen and (min-width: $tabwidth){
+                    padding: 0 5%;
+                }
+                >header {
+                    text-align: center;
+                    padding: 0 0 40px 0;
+                    @media screen and (min-width: $tabwidth){
+                        padding: 0 0 5% 0;
+                    }
+                    h2 {
+                        text-transform: uppercase;
+                        margin: 0;
+                        font-size: 20px;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 25px;
+                        }
+                    }
+                }
+                >.blocks {
+                    .block {
+                        margin: 20px 0 0 0;
+                        text-align: center;
+                        @media screen and (min-width: $tabwidth){
+                            width: 1/2*92%;
+                            float: left;
+                            margin: 0 4% 8% 4%;
+                        }
+                        @media screen and (min-width: $deskwidth){
+                            width: 1/4*88%;
+                            margin: 0 2% 4% 2%;
+                        }
+                        &:nth-child(odd) {
+                            @media screen and (min-width: $tabwidth) and (max-width: $deskwidth - 1px){
+                                margin-left: 0;
+                            }
+                        }
+                        &:nth-child(even) {
+                            @media screen and (min-width: $tabwidth) and (max-width: $deskwidth - 1px){
+                                margin-right: 0;
+                            }
+                        }
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        &.first {
+                            margin-left: 0;
+                        }
+                        &.last {
+                            margin-right: 0;
+                        }
+                        img {
+                            width: 100%;
+                            display: block;
+                        }
+                        .address {
+
+                        }
+                        .info {
+
+                        }
+                        a.button {
+                            border-radius: 900px;
+                            display: inline-block;
+                            margin: 20px 0 0 0;
+                            background-color: black;
+                            border: 1px solid black;
+                            color: white;
+                            padding: 10px 30px;
+                            text-decoration: none;
+                            &:hover {
+                                color: black;
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
