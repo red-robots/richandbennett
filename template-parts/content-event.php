@@ -7,6 +7,7 @@
  * @package ACStarter
  */
 
+$page_color= get_field("page_color");
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-event"); ?>>
@@ -26,7 +27,7 @@
                         <h1><?php the_title();?></h1>
                     <?php endif;
                     if($date):?>
-                        <div class="date"><?php echo $date;?></div><!--.date-->
+                        <div class="date <?php if($page_color) echo $page_color;?>"><?php echo $date;?></div><!--.date-->
                     <?php endif;?>
                 </header>
                 <a name="details"></a>
@@ -34,7 +35,7 @@
                     <?php the_content();?>
                 </div><!--.copy-->
                 <?php if($button_text&&$button_link):?>
-                    <a class="button" href="<?php echo $button_link;?>">
+                    <a class="button <?php if($page_color) echo $page_color;?>" href="<?php echo $button_link;?>">
                         <?php echo $button_text;?>
                     </a>
                 <?php endif;?>

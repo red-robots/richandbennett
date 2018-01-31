@@ -134,12 +134,148 @@
     }
 }
 .template-event {
+    >aside.top-bar {
+        >.wrapper.cap {
+            >.wrapper {
+                padding: 20px 0 40px 0;
+                text-align: center;
+                color: black;
+                @media screen and (min-width: $tabwidth){
+                    padding: 15px 5% 30px 5%;
+                    @include flexbox();
+                    @include flexbox-align-items(center);
+                    @include flexbox-align-content(stretch);
+                    @include flexbox-justify(center);
+                }
+                @media screen and (min-width: $deskwidth){
+                    padding: 15px 5%;
+                }
+                &.green {
+                    color: $color__rb-green;
+                    fill: $color__rb-green;
+                }
+                &.orange {
+                    color: $color__rb-orange;
+                    fill: $color__rb-orange;
+                }
+                &.cream {
+                    color: $color__rb-cream;
+                    fill: $color__rb-cream;
+                }
+                &.red {
+                    color: $color__rb-red;
+                    fill: $color__rb-red;
+                }
+                &.blue {
+                    color: $color__rb-blue;
+                    fill: $color__rb-blue;
+                }
+                a {
+                    font-size: 20px;
+                    color: inherit;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    text-align: center;
+                    display: block;
+                    fill: inherit;
+                    line-height: 1.2;
+                    font-weight: 700;
+                    @media screen and (min-width: $tabwidth){
+                        font-size: 20px;
+                    }
+                    @media screen and (min-width: $deskwidth){
+                        font-size: 25px;
+                    }
+                }
+                a.left {
+                    margin: 10px 0 0 0;
+                    @media screen and (min-width: $tabwidth){
+                        margin: 0 15px;
+                    }
+                    @media screen and (min-width: $deskwidth){
+                        margin: 0 30px;
+                    }
+                    &:first-child {
+                        margin-left: 0;
+                        margin-top: 0;
+                    }
+                }
+                a.center {
+                    margin: 10px 0 0 0;
+                    @media screen and (min-width: $tabwidth){
+                        margin: 0 15px 0 auto;
+                    }
+                    @media screen and (min-width: $deskwidth){
+                        margin: 0 30px 0 auto;
+                    }
+                    svg {
+                        width: 30px;
+                        display: inline-block;
+                        fill: inherit;
+                        @media screen and (min-width: $deskwidth){
+                            width: 40px;
+                        }
+                        .st0 {
+                            fill: inherit;
+                        }
+                    }
+                }
+                a.right {
+                    margin: 10px 0 0 0;
+                    @media screen and (min-width: $tabwidth){
+                        margin: 0 15px;
+                    }
+                    @media screen and (min-width: $deskwidth){
+                        margin: 0 30px;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        >.icon-wrapper {
+            height: 60px;
+            background-color: black;
+            position: relative;
+            &.green {
+                background-color: $color__rb-green;
+            }
+            &.orange {
+                background-color: $color__rb-orange;
+            }
+            &.cream {
+                background-color: $color__rb-cream;
+            }
+            &.red {
+                background-color: $color__rb-red;
+            }
+            &.blue {
+                background-color: $color__rb-blue;
+            }
+            .icon {
+                background-color: white;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                @include translatexy(-50%,-50%);
+                box-shadow: 0 0 10px grey;
+                border-radius: 50%;
+                width: 120px;
+                height: 120px;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
     >.row-1 {
         >.wrapper {
             text-align: center;
-            padding: 40px 0 20px 0;
+            padding: 60px 0 20px 0;
             @media screen and (min-width: $tabwidth){
-                padding: 5% 0 20px 0;
+                padding: 8% 0 20px 0;
             }
             >.wrapper {
                 @media screen and (min-width: $tabwidth){
@@ -168,6 +304,21 @@
                         font-weight: 700;
                         @media screen and (min-width: $tabwidth){
                             font-size: 50px;
+                        }
+                        &.green {
+                            color: $color__rb-green;
+                        }
+                        &.orange {
+                            color: $color__rb-orange;
+                        }
+                        &.cream {
+                            color: $color__rb-cream;
+                        }
+                        &.red {
+                            color: $color__rb-red;
+                        }
+                        &.blue {
+                            color: $color__rb-blue;
                         }
                     }
                 }
@@ -199,6 +350,26 @@
                         text-decoration: none;
                         color: black;
                         background-color: transparent;
+                    }
+                    &.green {
+                        background-color: $color__rb-green;
+                        border: 4px solid $color__rb-green;
+                    }
+                    &.orange {
+                        background-color: $color__rb-orange;
+                        border: 4px solid $color__rb-orange;
+                    }
+                    &.cream {
+                        background-color: $color__rb-cream;
+                        border: 4px solid $color__rb-cream;
+                    }
+                    &.red {
+                        background-color: $color__rb-red;
+                        border: 4px solid $color__rb-red;
+                    }
+                    &.blue {
+                        background-color: $color__rb-blue;
+                        border: 4px solid $color__rb-blue;
                     }
 
                 }
