@@ -1387,12 +1387,11 @@ html[xmlns] .flexslider .slides{display:block}
 .copy ul li a:hover,.copy ol li a:hover{color:black}
 .copy ol li{list-style-type:decimal}
 #masthead{background-color:black;color:white}
-#masthead.index>.wrapper{padding-bottom:0}
 #masthead>.wrapper{padding:20px 0;position:relative}
 @media screen and (min-width:600px){#masthead>.wrapper{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:flex-end;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch}
 }@media screen and (min-width:600px){#masthead>.wrapper::after{display:none}
 }#masthead>.wrapper .logo{margin:0 auto;width:80%}
-@media screen and (min-width:350px){#masthead>.wrapper .logo{width:15%;max-width:150px;margin:0 auto}
+@media screen and (min-width:350px){#masthead>.wrapper .logo{width:15%;max-width:150px;margin:0}
 }@media screen and (min-width:600px){#masthead>.wrapper .logo{float:none}
 }#masthead>.wrapper .logo a{display:block}
 #masthead>.wrapper .logo a img{display:block;width:100%}
@@ -1414,7 +1413,9 @@ html[xmlns] .flexslider .slides{display:block}
 }#masthead>.wrapper .col-2>.box.dots{-webkit-box-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;width:6%;max-width:30px}
 #masthead>.wrapper .col-2>.box a{display:block;color:inherit;text-decoration:none;max-height:100%}
 #masthead>.wrapper .col-2>.box img{display:block;width:100%}
-#colophon{background-color:black;color:white;position:relative}
+#masthead.index>.wrapper{padding-bottom:0;display:block}
+@media screen and (min-width:350px){#masthead.index>.wrapper .logo{float:left;margin:0}
+}#colophon{background-color:black;color:white;position:relative}
 #colophon>img.blocks{width:100%;position:absolute;bottom:100%;left:0;width:100%;margin:0 0 -12px 0}
 #colophon>.wrapper{padding:40px 0 20px 0;text-align:center}
 #colophon>.wrapper>.row-1 a{display:inline-block;font-size:35px;margin:0 10px;text-decoration:none;color:white}

@@ -85,11 +85,6 @@
 #masthead {
 	background-color: black;
 	color: white;
-	&.index {
-		>.wrapper {
-			padding-bottom: 0;
-		}
-	}
 	>.wrapper {
 		padding: 20px 0;
 		position: relative;
@@ -110,7 +105,7 @@
 			@media screen and (min-width: $tinywidth){
 				width: 15%;
 				max-width: 150px;
-				margin: 0 auto;
+				margin: 0;
 			}
 			@media screen and (min-width: $tabwidth){
 				float: none;
@@ -229,6 +224,18 @@
 						width: 100%;
 				}
 			}	
+		}
+	}
+	&.index {
+		>.wrapper {
+			padding-bottom: 0;
+			display: block;
+			.logo {
+				@media screen and (min-width: $tinywidth){
+					float: left;
+					margin: 0;
+				}
+			}
 		}
 	}
 }
