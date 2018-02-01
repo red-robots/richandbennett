@@ -94,4 +94,12 @@ jQuery(document).ready(function ($) {
 		$parent.toggleClass('close');
 	});
 
+	$('#masthead .box.dots, #masthead nav.menu img.dots').click(function(){
+		var $menu = $('#masthead nav.menu');
+		if($menu.hasClass('toggled')){
+			$menu.removeClass('toggled');
+		} else {
+			$menu.addClass('toggled');
+		}
+	});
 });// END #####################################    END
