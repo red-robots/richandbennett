@@ -1390,29 +1390,41 @@ html[xmlns] .flexslider .slides{display:block}
 #masthead>.wrapper{padding:20px 0;position:relative}
 @media screen and (min-width:600px){#masthead>.wrapper{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:flex-end;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch}
 }@media screen and (min-width:600px){#masthead>.wrapper::after{display:none}
-}#masthead>.wrapper .logo{margin:0 auto;width:80%}
-@media screen and (min-width:350px){#masthead>.wrapper .logo{width:15%;max-width:150px;margin:0}
-}@media screen and (min-width:600px){#masthead>.wrapper .logo{float:none}
-}#masthead>.wrapper .logo a{display:block}
-#masthead>.wrapper .logo a img{display:block;width:100%}
-@media screen and (min-width:350px){#masthead>.wrapper .col-2{width:100%}
-}@media screen and (min-width:600px){#masthead>.wrapper .col-2{width:63%;float:none;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:flex-end;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch}
-}#masthead>.wrapper .col-2>.menu{-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;display:none;position:absolute;width:auto;right:0;top:0;padding:20px 4%;height:100%;max-width:63%;background:#04a96d;background:-webkit-linear-gradient(left,#04a96d,#055e3c);background:linear-gradient(to right,#04a96d,#055e3c)}
-#masthead>.wrapper .col-2>.menu.toggled{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}
-#masthead>.wrapper .col-2>.menu>div{height:100%}
-#masthead>.wrapper .col-2>.menu>div ul{margin:0;padding:0;height:100%;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;overflow:auto}
-#masthead>.wrapper .col-2>.menu>div ul li{margin:0 20px;list-style-type:none}
-#masthead>.wrapper .col-2>.menu>div ul li a{text-decoration:none;display:block;font-size:35px;font-weight:700;color:white}
-#masthead>.wrapper .col-2>.menu img{-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end;width:6%;max-width:30px;margin:0 0 0 30px}
-#masthead>.wrapper .col-2>.box{vertical-align:bottom;margin:20px 0 0 0;max-width:100px}
-@media screen and (min-width:350px){#masthead>.wrapper .col-2>.box{display:inline-block;margin:0 2% 4% 2%;width:20%}
-}@media screen and (min-width:600px){#masthead>.wrapper .col-2>.box{margin:0}
-}@media screen and (min-width:1200px){#masthead>.wrapper .col-2>.box{width:100px;margin:0}
-}@media screen and (min-width:1200px){#masthead>.wrapper .col-2>.box.first{margin-left:0}
-}@media screen and (min-width:1200px){#masthead>.wrapper .col-2>.box.last{margin-right:0}
-}#masthead>.wrapper .col-2>.box.dots{-webkit-box-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;width:6%;max-width:30px}
-#masthead>.wrapper .col-2>.box a{display:block;color:inherit;text-decoration:none;max-height:100%}
-#masthead>.wrapper .col-2>.box img{display:block;width:100%}
+}#masthead>.wrapper>.logo{margin:0 auto;width:80%}
+@media screen and (min-width:350px){#masthead>.wrapper>.logo{width:15%;max-width:150px;margin:0}
+}@media screen and (min-width:600px){#masthead>.wrapper>.logo{float:none}
+}#masthead>.wrapper>.logo a{display:block}
+#masthead>.wrapper>.logo a img{display:block;width:100%}
+#masthead>.wrapper .button-wrapper{text-align:center;padding:20px 0}
+@media screen and (min-width:600px){#masthead>.wrapper .button-wrapper{display:none}
+}#masthead>.wrapper .button-wrapper .button{padding:10px 20px;color:white;text-transform:uppercase;background-color:lightgrey;font-size:20px;font-weight:700;display:inline-block}
+#masthead>.wrapper>.col-2{text-align:center;display:none}
+@media screen and (min-width:600px){#masthead>.wrapper>.col-2{width:63%;float:none;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:flex-end;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch}
+}#masthead>.wrapper>.col-2.toggled{display:block}
+#masthead>.wrapper>.col-2>.menu{padding:40px 0 20px 0}
+@media screen and (min-width:600px){#masthead>.wrapper>.col-2>.menu{-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;display:none;position:absolute;width:auto;right:0;top:0;margin:0;padding:20px;height:100%;max-width:63%;background:#04a96d;background:-webkit-linear-gradient(left,#04a96d,#055e3c);background:linear-gradient(to right,#04a96d,#055e3c)}
+}@media screen and (min-width:900px){#masthead>.wrapper>.col-2>.menu{padding:20px 4%}
+}#masthead>.wrapper>.col-2>.menu.toggled{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}
+@media screen and (min-width:600px){#masthead>.wrapper>.col-2>.menu>div{height:100%}
+}#masthead>.wrapper>.col-2>.menu>div ul{padding:0;margin:0;text-align:center}
+@media screen and (min-width:600px){#masthead>.wrapper>.col-2>.menu>div ul{height:100%;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;overflow:auto}
+}#masthead>.wrapper>.col-2>.menu>div ul li{margin:10px 0 0 0;list-style-type:none}
+@media screen and (min-width:600px){#masthead>.wrapper>.col-2>.menu>div ul li{margin:0 20px}
+}#masthead>.wrapper>.col-2>.menu>div ul li:first-child{margin-top:0}
+#masthead>.wrapper>.col-2>.menu>div ul li a{text-decoration:none;display:block;font-size:20px;font-weight:700;color:white}
+@media screen and (min-width:600px){#masthead>.wrapper>.col-2>.menu>div ul li a{font-size:35px}
+}#masthead>.wrapper>.col-2>.menu img{display:none}
+@media screen and (min-width:600px){#masthead>.wrapper>.col-2>.menu img{display:block;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end;width:6%;max-width:30px;margin:0 0 0 30px}
+}#masthead>.wrapper>.col-2>.box{vertical-align:bottom;margin:20px 0 0 0;display:inline-block;margin:0 2% 4% 2%;width:45%}
+@media screen and (min-width:350px){#masthead>.wrapper>.col-2>.box{margin:0 6% 12% 6%;width:37%}
+}@media screen and (min-width:600px){#masthead>.wrapper>.col-2>.box{margin:0;width:100px}
+}@media screen and (min-width:1200px){#masthead>.wrapper>.col-2>.box.first{margin-left:0}
+}@media screen and (min-width:1200px){#masthead>.wrapper>.col-2>.box.last{margin-right:0}
+}#masthead>.wrapper>.col-2>.box.tubing{margin-bottom:0}
+#masthead>.wrapper>.col-2>.box.dots{display:none}
+@media screen and (min-width:600px){#masthead>.wrapper>.col-2>.box.dots{display:block;-webkit-box-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;width:6%;max-width:30px}
+}#masthead>.wrapper>.col-2>.box a{display:block;color:inherit;text-decoration:none}
+#masthead>.wrapper>.col-2>.box svg{width:100%;vertical-align:bottom}
 #masthead.index>.wrapper{padding-bottom:0;display:block}
 @media screen and (min-width:350px){#masthead.index>.wrapper .logo{float:left;margin:0}
 }#colophon{background-color:black;color:white;position:relative}

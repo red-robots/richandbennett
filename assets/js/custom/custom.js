@@ -102,4 +102,12 @@ jQuery(document).ready(function ($) {
 			$menu.addClass('toggled');
 		}
 	});
+	$('#masthead .button-wrapper .button').click(function(){
+		var $menu = $('#masthead >.wrapper >.col-2');
+		if($menu.hasClass('toggled')){
+			$menu.removeClass('toggled');
+		} else {
+			$menu.addClass('toggled');
+		}
+	});
 });// END #####################################    END

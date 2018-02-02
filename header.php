@@ -29,34 +29,37 @@
 			<div class="logo col-1">
 				<a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_template_directory_uri()."/images/logo.png";?>" alt="<?php bloginfo('name'); ?>"></a>
 			</div>
+			<div class="button-wrapper">
+				<div class="button">Menu</div><!--.button-->
+			</div><!--.button-wrapper-->
 			<div class="col-2">
 				<div class="box st-pats first">
 					<a href="<?php echo get_permalink(7);?>">
-						<img src="<?php echo get_template_directory_uri()."/images/icon-white-st-pats.png";?>" alt="white clover">
+						<?php include get_template_directory()."/images/icon-white-st-pats.svg";?>
 					</a>
 				</div><!--.box-->
 				<div class="box americrawl">
 					<a href="<?php echo get_permalink(9);?>">
-						<img src="<?php echo get_template_directory_uri()."/images/icon-white-americrawl.png";?>" alt="white star">
+						<?php include get_template_directory()."/images/icon-white-americrawl.svg";?>
 					</a>
 				</div><!--.box-->
 				<div class="box nye">
 					<a href="<?php echo get_permalink(38);?>">
-						<img src="<?php echo get_template_directory_uri()."/images/icon-white-nye.png";?>" alt="white glass">
+						<?php include get_template_directory()."/images/icon-white-nye.svg";?>
 					</a>
 				</div><!--.box-->
 				<div class="box halloween">
 					<a href="<?php echo get_permalink(40);?>">
-						<img src="<?php echo get_template_directory_uri()."/images/icon-white-halloween.png";?>" alt="white pumpkin">
+						<?php include get_template_directory()."/images/icon-white-halloween.svg";?>
 					</a>
 				</div><!--.box-->
 				<div class="box tubing">
 					<a href="<?php echo get_permalink(11);?>">
-						<img src="<?php echo get_template_directory_uri()."/images/icon-white-tubing.png";?>" alt="white tubing">
+						<?php include get_template_directory()."/images/icon-white-tubing.svg";?>
 					</a>
 				</div><!--.box--> 
 				<div class="box dots last">
-					<img src="<?php echo get_template_directory_uri()."/images/more-dots.svg";?>" alt="dots">
+						<?php include get_template_directory()."/images/more-dots.svg";?>
 				</div><!--.box--> 
 				<nav class="menu">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
