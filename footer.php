@@ -14,7 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<img class="blocks" src="<?php echo get_template_directory_uri()."/images/blocks.png";?>" alt="blocks">
+		<?php if( is_front_page() ) : ?>
+			<img class="blocks" src="<?php echo get_template_directory_uri()."/images/blocks.png";?>" alt="blocks">
+		<?php endif; ?>
 		<div class="wrapper cap">
 			<?php $mailing_line_1 = get_field("mailing_line_1","option");
 			$mailing_line_2 = get_field("mailing_line_2","option");
