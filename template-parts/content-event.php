@@ -81,7 +81,7 @@ $page_color= get_field("page_color");
                             <?php if($partner['image']):?>
                                 <div class="block js-blocks <?php if($i%4==0) echo "first";?> <?php if(($i-3)%4==0) echo "last";?>">
                                     <?php if($partner['link']):?>
-                                        <a href="<?php echo $partner['link'];?>">
+                                        <a href="<?php echo $partner['link'];?>" target="_blank">
                                     <?php endif;?>
                                         <img src="<?php echo $partner['image']['sizes']['large'];?>" alt="<?php echo $partner['image']['alt'];?>">
                                     <?php if($partner['link']):?>
@@ -158,7 +158,7 @@ $page_color= get_field("page_color");
                                         </div><!--.info-->
                                     <?php endif;?>
                                     <?php if($hotel['button_link']&&$hotel['button_text']):?>
-                                        <a class="button" href="<?php echo $hotel['button_link'];?>">
+                                        <a class="button" href="<?php echo $hotel['button_link'];?>" target="_blank">
                                             <?php echo $hotel['button_text'];?>
                                         </a>
                                     <?php endif;
