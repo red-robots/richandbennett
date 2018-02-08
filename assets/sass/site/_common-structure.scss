@@ -164,11 +164,11 @@
 					padding: 20px;
 					height: 100%;
 					max-width: 63%;
-					background: $color__rb-green; /* For browsers that do not support gradients */
-					background: -webkit-linear-gradient(left, $color__rb-green , $color__rb-dark-green); /* For Safari 5.1 to 6.0 */
-					background: -o-linear-gradient(right, $color__rb-green , $color__rb-dark-green); /* For Opera 11.1 to 12.0 */
-					background: -moz-linear-gradient(right, $color__rb-green , $color__rb-dark-green); /* For Firefox 3.6 to 15 */
-					background: linear-gradient(to right, $color__rb-green , $color__rb-dark-green); /* Standard syntax */
+					background: $color__rb-gradient-green; /* For browsers that do not support gradients */
+					background: -webkit-linear-gradient(left, $color__rb-gradient-green , $color__rb-gradient-blue); /* For Safari 5.1 to 6.0 */
+					background: -o-linear-gradient(right, $color__rb-gradient-green , $color__rb-gradient-blue); /* For Opera 11.1 to 12.0 */
+					background: -moz-linear-gradient(right, $color__rb-gradient-green , $color__rb-gradient-blue); /* For Firefox 3.6 to 15 */
+					background: linear-gradient(to right, $color__rb-gradient-green , $color__rb-gradient-blue); /* Standard syntax */
 				}
 				@media screen and (min-width: $midwidth){
 					padding: 20px 4%;
@@ -359,6 +359,17 @@
 			#mc_embed_signup {
 				margin: 20px 0 0 0;
 				input {
+					border: none;
+					border-radius: 0;
+					box-shadow: none;
+					text-shadow: none;
+				}
+				input[type=submit] {
+					background: $color__rb-gradient-green; /* For browsers that do not support gradients */
+					background: -webkit-linear-gradient(left, $color__rb-gradient-green , $color__rb-gradient-blue); /* For Safari 5.1 to 6.0 */
+					background: -o-linear-gradient(right, $color__rb-gradient-green , $color__rb-gradient-blue); /* For Opera 11.1 to 12.0 */
+					background: -moz-linear-gradient(right, $color__rb-gradient-green , $color__rb-gradient-blue); /* For Firefox 3.6 to 15 */
+					background: linear-gradient(to right, $color__rb-gradient-green , $color__rb-gradient-blue); /* Standard syntax */
 				}
 				input[type=email] {
 					color: black;
