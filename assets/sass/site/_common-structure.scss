@@ -347,13 +347,38 @@
 				padding: 5% 0 0 0;
 			}
 			>.row-1 {
-				font-size: 24px;
+				font-size: 28px;
 				font-weight: 700;
 				line-height: 1.2;
 			}
 			>.row-2 {
-				font-size: 18px;
+				font-size: 20px;
 				line-height: 1.2;
+				font-weight: 300;
+			}
+			#mc_embed_signup {
+				margin: 20px 0 0 0;
+				input {
+				}
+				input[type=email] {
+					color: black;
+					&:-ms-input-placeholder {
+						color: black;
+					}
+					&::-webkit-input-placeholder {
+						color: black;
+					}
+					&:-moz-placeholder {
+						color: black;
+					}
+					&::placeholder {
+						color: black;
+					}
+					&::-moz-placeholder {
+						color: black;
+					}
+
+				}
 			}
 		}
 		>.row-3 {

@@ -551,7 +551,7 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */@font-face{font-family:'FontAwesome';src:url("./fonts/font-awesome/fontawesome-webfont.eot?v=4.5.0");src:url("./fonts/font-awesome/fontawesome-webfont.eot?v=4.5.0#iefix") format("embedded-opentype"),url("./fonts/font-awesome/fontawesome-webfont.woff2?v=4.5.0") format("woff2"),url("./fonts/font-awesome/fontawesome-webfont.woff?v=4.5.0") format("woff"),url("./fonts/font-awesome/fontawesome-webfont.ttf?v=4.5.0") format("truetype"),url("./fonts/font-awesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");font-weight:normal;font-style:normal}
-.fa{display:inline-block;font:normal normal normal 14px / 1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-15%}
 .fa-2x{font-size:2em}
 .fa-3x{font-size:3em}
@@ -1402,7 +1402,7 @@ html[xmlns] .flexslider .slides{display:block}
 @media screen and (min-width:600px){#masthead>.wrapper>.col-2{width:63%;float:none;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:flex-end;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch}
 }#masthead>.wrapper>.col-2.toggled{display:block}
 #masthead>.wrapper>.col-2>.menu{padding:40px 0 20px 0;-webkit-transition:all ease .3s;transition:all ease .3s}
-@media screen and (min-width:600px){#masthead>.wrapper>.col-2>.menu{-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;display:none;position:absolute;width:auto;right:0;top:0;margin:0;padding:20px;height:100%;max-width:63%;background:#04a96d;background:-webkit-linear-gradient(left,#04a96d,#055e3c);background:linear-gradient(to right,#04a96d,#055e3c)}
+@media screen and (min-width:600px){#masthead>.wrapper>.col-2>.menu{-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;display:none;position:absolute;width:auto;right:0;top:0;margin:0;padding:20px;height:100%;max-width:63%;background:#04a96d;background:-webkit-linear-gradient(left,#04a96d,#055e3c);background:linear-gradient(to right,#04a96d,#055e3c)}
 }@media screen and (min-width:900px){#masthead>.wrapper>.col-2>.menu{padding:20px 4%}
 }#masthead>.wrapper>.col-2>.menu.toggled{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}
 @media screen and (min-width:600px){#masthead>.wrapper>.col-2>.menu>div{height:100%}
@@ -1440,8 +1440,15 @@ html[xmlns] .flexslider .slides{display:block}
 #colophon>.wrapper>.row-1 a{display:inline-block;font-size:35px;margin:0 10px;text-decoration:none;color:white}
 #colophon>.wrapper>.row-2{padding:20px 0 0 0}
 @media screen and (min-width:350px){#colophon>.wrapper>.row-2{padding:5% 0 0 0}
-}#colophon>.wrapper>.row-2>.row-1{font-size:24px;font-weight:700;line-height:1.2}
-#colophon>.wrapper>.row-2>.row-2{font-size:18px;line-height:1.2}
+}#colophon>.wrapper>.row-2>.row-1{font-size:28px;font-weight:700;line-height:1.2}
+#colophon>.wrapper>.row-2>.row-2{font-size:20px;line-height:1.2;font-weight:300}
+#colophon>.wrapper>.row-2 #mc_embed_signup{margin:20px 0 0 0}
+#colophon>.wrapper>.row-2 #mc_embed_signup input[type=email]{color:black}
+#colophon>.wrapper>.row-2 #mc_embed_signup input[type=email]:-ms-input-placeholder{color:black}
+#colophon>.wrapper>.row-2 #mc_embed_signup input[type=email]::-webkit-input-placeholder{color:black}
+#colophon>.wrapper>.row-2 #mc_embed_signup input[type=email]::-moz-placeholder{color:black}
+#colophon>.wrapper>.row-2 #mc_embed_signup input[type=email]::placeholder{color:black}
+#colophon>.wrapper>.row-2 #mc_embed_signup input[type=email]::-moz-placeholder{color:black}
 #colophon>.wrapper>.row-3{padding:20px 0 0 0}
 @media screen and (min-width:350px){#colophon>.wrapper>.row-3{padding:5% 0 0 0}
 }#colophon>.wrapper>.row-3>div ul{margin:0;padding:0}
