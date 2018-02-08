@@ -33,6 +33,11 @@
                     <img src="<?php echo get_template_directory_uri()."/images/icon-st-pats.svg";?>" alt="clover">
                 </a>
             </div><!--.box-->
+            <div class="box halloween">
+                <a href="<?php echo get_permalink(40);?>">
+                    <img src="<?php echo get_template_directory_uri()."/images/icon-halloween.svg";?>" alt="pumpkin">
+                </a>
+            </div><!--.box-->
             <div class="box americrawl">
                 <a href="<?php echo get_permalink(9);?>">
                     <img src="<?php echo get_template_directory_uri()."/images/icon-americrawl.svg";?>" alt="star">
@@ -41,11 +46,6 @@
             <div class="box nye">
                 <a href="<?php echo get_permalink(38);?>">
                     <img src="<?php echo get_template_directory_uri()."/images/icon-nye.svg";?>" alt="glass">
-                </a>
-            </div><!--.box-->
-            <div class="box halloween">
-                <a href="<?php echo get_permalink(40);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/icon-halloween.svg";?>" alt="pumpkin">
                 </a>
             </div><!--.box-->
             <div class="box tubing last">

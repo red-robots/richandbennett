@@ -38,6 +38,11 @@
 						<?php include get_template_directory()."/images/icon-white-st-pats.svg";?>
 					</a>
 				</div><!--.box-->
+				<div class="box halloween">
+					<a href="<?php echo get_permalink(40);?>">
+						<?php include get_template_directory()."/images/icon-white-halloween.svg";?>
+					</a>
+				</div><!--.box-->
 				<div class="box americrawl">
 					<a href="<?php echo get_permalink(9);?>">
 						<?php include get_template_directory()."/images/icon-white-americrawl.svg";?>
@@ -46,11 +51,6 @@
 				<div class="box nye">
 					<a href="<?php echo get_permalink(38);?>">
 						<?php include get_template_directory()."/images/icon-white-nye.svg";?>
-					</a>
-				</div><!--.box-->
-				<div class="box halloween">
-					<a href="<?php echo get_permalink(40);?>">
-						<?php include get_template_directory()."/images/icon-white-halloween.svg";?>
 					</a>
 				</div><!--.box-->
 				<div class="box tubing">
