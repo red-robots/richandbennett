@@ -164,7 +164,7 @@ $page_color= get_field("page_color");
                                             </div><!--.info-->
                                         <?php endif;?>
                                         <?php if($hotel['button_link']&&$hotel['button_text']):?>
-                                            <a class="button" href="<?php echo $hotel['button_link'];?>">
+                                            <a class="button" href="<?php echo $hotel['button_link'];?>" target="_blank">
                                                 <?php echo $hotel['button_text'];?>
                                             </a>
                                         <?php endif;
