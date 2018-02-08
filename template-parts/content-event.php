@@ -16,6 +16,7 @@ $page_color= get_field("page_color");
         <div class="wrapper cap">
             <div class="wrapper">
                 <?php $full_title = get_field("full_title");
+                $location = get_field("location");
                 $date = get_field("date");
                 $button_link = get_field("button_link");
                 $button_text = get_field("button_text");?>
@@ -23,8 +24,10 @@ $page_color= get_field("page_color");
                     <div class="name">Rich &amp; Bennett's</div><!--.name-->
                     <?php if($full_title):?>
                         <h1><?php echo $full_title;?></h1>
+                        <?php if($location) { ?><h2 class="location"><?php echo $location; ?></h2><?php } ?>
                     <?php else:?>
                         <h1><?php the_title();?></h1>
+                        <?php if($location) { ?><h2 class="location"><?php echo $location; ?></h2><?php } ?>
                     <?php endif;
                     if($date):?>
                         <div class="date <?php if($page_color) echo $page_color;?>"><?php echo $date;?></div><!--.date-->
@@ -146,23 +149,28 @@ $page_color= get_field("page_color");
                         foreach($hotels as $hotel):?>
                             <?php if($hotel['image']):?>
                                 <div class="block js-blocks <?php if($i%4==0) echo "first";?> <?php if(($i-3)%4==0) echo "last";?>">
-                                    <img src="<?php echo $hotel['image']['sizes']['large'];?>" alt="<?php echo $hotel['image']['alt'];?>">
-                                    <?php if($hotel['address']):?>
-                                        <div class="address">
-                                            <?php echo $hotel['address'];?>
-                                        </div><!--.address-->
-                                    <?php endif;
-                                    if($hotel['info']):?>
-                                        <div class="info">
-                                            <?php echo $hotel['info'];?>
-                                        </div><!--.info-->
-                                    <?php endif;?>
-                                    <?php if($hotel['button_link']&&$hotel['button_text']):?>
-                                        <a class="button" href="<?php echo $hotel['button_link'];?>" target="_blank">
-                                            <?php echo $hotel['button_text'];?>
-                                        </a>
-                                    <?php endif;
-                                    $i++;?>
+                                    <div class="hotel-wrap">
+                                        <img src="<?php echo $hotel['image']['sizes']['large'];?>" alt="<?php echo $hotel['image']['alt'];?>">
+                                    </div>
+                                    <div class="details">
+                                        <?php if($hotel['address']):?>
+                                            <div class="address">
+                                                <?php echo $hotel['address'];?>
+                                            </div><!--.address-->
+                                        <?php endif;
+                                        if($hotel['info']):?>
+                                            <div class="info">
+                                                <?php echo $hotel['info'];?>
+                                            </div><!--.info-->
+                                        <?php endif;?>
+                                        <?php if($hotel['button_link']&&$hotel['button_text']):?>
+                                            <a class="button" href="<?php echo $hotel['button_link'];?>">
+                                                <?php echo $hotel['button_text'];?>
+                                            </a>
+                                        <?php endif;
+                                        $i++;?>
+                                    </div>
+                                    <!-- details -->
                                 </div><!--.block-->
                             <?php endif;?>
                         <?php endforeach;?>

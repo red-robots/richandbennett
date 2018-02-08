@@ -47,7 +47,7 @@ $page_color= get_field("page_color");
 		<?php $icon = get_field("icon");
 		if($icon):?>
 			<div class="icon">
-				<img src="<?php echo $icon['url'];?>" alt="<?php echo $icon['alt'];?>">
+				<img class="wow flipInX" data-wow-delay=".5s" src="<?php echo $icon['url'];?>" alt="<?php echo $icon['alt'];?>">
 			</div><!--.icon-->
 		<?php endif;?>
 	</div><!--.icon-wrapper-->
