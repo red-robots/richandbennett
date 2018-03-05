@@ -80,6 +80,63 @@
 			list-style-type: decimal;
 		}
 	}
+	a.button {
+		display: inline-block;
+		padding: 10px 50px;
+		text-decoration: none;
+		// background-color: black;
+		border: 4px solid black;
+		border-radius: 900px;
+		color: white;
+		margin: 30px 0 0 0;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 700;
+		@include transition(all ease .3s);
+		@media screen and (min-width: $tabwidth){
+			font-size: 25px;
+			margin: 4% 0 0 0;
+		}
+		&:hover {
+			text-decoration: none;
+			color: inherit;
+			background-color: #fff;                    }
+		&.green {
+			background-color: $color__rb-green;
+			border: 4px solid $color__rb-green;
+			&:hover {
+				background-color: #fff;  
+			}
+		}
+		&.orange {
+			background-color: $color__rb-orange;
+			border: 4px solid $color__rb-orange;
+			&:hover {
+				background-color: #fff;  
+			}
+		}
+		&.cream {
+			background-color: $color__rb-cream;
+			border: 4px solid $color__rb-cream;
+			&:hover {
+				background-color: #fff;  
+			}
+		}
+		&.red {
+			background-color: $color__rb-red;
+			border: 4px solid $color__rb-red;
+			&:hover {
+				background-color: #fff;  
+			}
+		}
+		&.blue {
+			background-color: $color__rb-blue;
+			border: 4px solid $color__rb-blue;
+			&:hover {
+				background-color: #fff;  
+			}
+		}
+	}
 }
 
 #masthead {

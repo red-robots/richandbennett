@@ -558,59 +558,12 @@
                         }
                     }
                 }
-                >.faq {
-                    .row {
-                        margin: 0 0 20px 0;
-                        .fa {
-                            float: left;
-                            cursor: pointer;
-                            font-size: 35px;
-                            color: lightgrey;
-                            margin: -5px 20px 0 0;
-                            line-height: 1;
-                            vertical-align: top;
-                            display: block;
-                            width: 15px;
-                            @media screen and (min-width: $tabwidth){
-                                margin: -15px 20px 0 0;
-                                font-size: 65px;
-                                width: 40px;
-                            }
-                        }
-                        .fa-caret-down {
-                            display: none;
-                        }
-                        &.close {
-                            .fa-caret-down {
-                                display: block;
-                            }
-                            .fa-caret-right {
-                                display: none;
-                            }
-                        }
-                        >.wrapper {
-                            width: calc(100% - 35px);
-                            float: left;
-                            @media screen and (min-width: $tabwidth){
-                                width: calc(100% - 60px);
-                            }
-                            .question {
-                                font-weight: 700;
-                                cursor: pointer;
-                                font-size: 20px;
-                                @media screen and (min-width: $tabwidth){
-                                    font-size: 25px;
-                                }
-                            }
-                            .answer {
-                                display: none;
-                                font-size: 16px;
-                                margin: 20px 0;
-                                @media screen and (min-width: $tabwidth){
-                                    font-size: 20px;
-                                }
-                            }
-                        }
+                .copy {
+                    margin:0;
+                    text-align: center;
+                    @media screen and (min-width: $tabwidth){
+                        margin: 0 auto 0 auto;
+                        width: 70%;
                     }
                 }
             }
@@ -713,6 +666,89 @@
                             &:hover {
                                 color: black;
                                 background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    >.row-5 {
+        >.wrapper {
+            padding: 40px 0;
+            @media screen and (min-width: $tabwidth){
+                padding: 5% 0;
+            }
+            >.wrapper {
+                @media screen and (min-width: $tabwidth){
+                    padding: 0 5%;
+                }
+                >header {
+                    text-align: center;
+                    padding: 0 0 40px 0;
+                    @media screen and (min-width: $tabwidth){
+                        padding: 0 0 5% 0;
+                    }
+                    h2 {
+                        text-transform: uppercase;
+                        margin: 0;
+                        font-size: 20px;
+                        @media screen and (min-width: $tabwidth){
+                            font-size: 25px;
+                        }
+                    }
+                }
+                >.faq {
+                    .row {
+                        margin: 0 0 20px 0;
+                        .fa {
+                            float: left;
+                            cursor: pointer;
+                            font-size: 35px;
+                            color: lightgrey;
+                            margin: -5px 20px 0 0;
+                            line-height: 1;
+                            vertical-align: top;
+                            display: block;
+                            width: 15px;
+                            @media screen and (min-width: $tabwidth){
+                                margin: -15px 20px 0 0;
+                                font-size: 65px;
+                                width: 40px;
+                            }
+                        }
+                        .fa-caret-down {
+                            display: none;
+                        }
+                        &.close {
+                            .fa-caret-down {
+                                display: block;
+                            }
+                            .fa-caret-right {
+                                display: none;
+                            }
+                        }
+                        >.wrapper {
+                            width: calc(100% - 35px);
+                            float: left;
+                            @media screen and (min-width: $tabwidth){
+                                width: calc(100% - 60px);
+                            }
+                            .question {
+                                font-weight: 700;
+                                cursor: pointer;
+                                font-size: 20px;
+                                @media screen and (min-width: $tabwidth){
+                                    font-size: 25px;
+                                }
+                            }
+                            .answer {
+                                display: none;
+                                font-size: 16px;
+                                margin: 20px 0;
+                                @media screen and (min-width: $tabwidth){
+                                    font-size: 20px;
+                                }
                             }
                         }
                     }

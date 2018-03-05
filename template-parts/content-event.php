@@ -99,37 +99,23 @@ $page_color= get_field("page_color");
             </div><!--.wrapper-->
         </div><!--.row-2-->
     <?php endif;
-    $faq_title = get_field("faq_title");
-    $faq = get_field("faq");
-    if($faq):?>
+    $prepay_title = get_field("prepay_title");
+    $prepay_copy = get_field("prepay_copy");
+    if($prepay_copy):?>
         <div class="row-3">
             <div class="wrapper cap">
                 <div class="wrapper">
-                    <a name="faqs"></a>
-                    <?php if($faq_title):?>
+                    <a name="prepay-events"></a>
+                    <?php if($prepay_title):?>
                         <header>
-                            <h2><?php echo $faq_title;?></h2>
+                            <h2><?php echo $prepay_title;?></h2>
                         </header>
                     <?php endif;?>
-                    <div class="faq">
-                        <?php foreach($faq as $row):?>
-                            <?php if($row['question']&&$row['answer']):?>
-                                <div class="row clear-bottom">
-                                    <i class="fa fa-caret-right"></i><i class="close fa fa-caret-down"></i>
-                                    <div class="wrapper">
-                                        <div class="question">
-                                            <?php echo $row['question'];?>
-                                        </div><!--.question-->
-                                        <div class="answer copy">
-                                            <?php echo $row['answer'];?>
-                                        </div><!--.answer-->
-                                    </div><!--.wrapper-->
-                                </div><!--.row-->
-                            <?php endif;?>
-                        <?php endforeach;?>
-                    </div><!--.faq-->
+                    <div class="copy">
+                        <?php echo $prepay_copy;?>
+                    </div><!--.copy-->
                 </div><!--.wrapper-->
-            </div><!--.wrapper-->
+            </div><!--.wrapper.cap-->
         </div><!--.row-3-->
     <?php endif;
     $hotel_title = get_field("hotel_title");
@@ -178,5 +164,38 @@ $page_color= get_field("page_color");
                 </div><!--.wrapper-->
             </div><!--.wrapper-->
         </div><!--.row-4-->
+    <?php endif;
+    $faq_title = get_field("faq_title");
+    $faq = get_field("faq");
+    if($faq):?>
+        <div class="row-5">
+            <div class="wrapper cap">
+                <div class="wrapper">
+                    <a name="faqs"></a>
+                    <?php if($faq_title):?>
+                        <header>
+                            <h2><?php echo $faq_title;?></h2>
+                        </header>
+                    <?php endif;?>
+                    <div class="faq">
+                        <?php foreach($faq as $row):?>
+                            <?php if($row['question']&&$row['answer']):?>
+                                <div class="row clear-bottom">
+                                    <i class="fa fa-caret-right"></i><i class="close fa fa-caret-down"></i>
+                                    <div class="wrapper">
+                                        <div class="question">
+                                            <?php echo $row['question'];?>
+                                        </div><!--.question-->
+                                        <div class="answer copy">
+                                            <?php echo $row['answer'];?>
+                                        </div><!--.answer-->
+                                    </div><!--.wrapper-->
+                                </div><!--.row-->
+                            <?php endif;?>
+                        <?php endforeach;?>
+                    </div><!--.faq-->
+                </div><!--.wrapper-->
+            </div><!--.wrapper-->
+        </div><!--.row-5-->
     <?php endif;?>
 </article><!-- #post-## -->

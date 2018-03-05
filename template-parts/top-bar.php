@@ -17,6 +17,7 @@ $email = get_field("email","option");
 $partners = get_field("partners");
 $faq = get_field("faq");
 $hotels = get_field("hotels");
+$prepay_copy = get_field("prepay_copy");
 $page_color= get_field("page_color");
 ?>
 
@@ -26,6 +27,9 @@ $page_color= get_field("page_color");
 			<a class="left" href="#details">Details</a>
 			<?php if($partners):?>
 				<a class="left" href="#partners">Partners</a>
+			<?php endif;
+			if($prepay_copy):?>
+				<a class="left" href="#prepay-events">Prepay Events</a>
 			<?php endif;
 			if($hotels):?>
 				<a class="left" href="#hotel-info">Hotel Info</a>
