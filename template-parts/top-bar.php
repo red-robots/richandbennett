@@ -37,9 +37,6 @@ $page_color= get_field("page_color");
 			if($faq):?>
 				<a class="left" href="#faqs">Faq's</a>
 			<?php endif;
-			if($facebook_link||$instagram_link||$twitter_link||$email):?>
-				<a class="center" href="#social"><?php include get_template_directory()."/images/share.svg";?></a>
-			<?php endif;
 			if($button_text&&$button_link):?>
 				<a class="right button" href="<?php echo $button_link;?>">
 					<?php echo $button_text;?>

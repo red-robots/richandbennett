@@ -1526,8 +1526,8 @@ html[xmlns] .flexslider .slides{display:block}
 }.template-event>aside.top-bar>.wrapper.cap>.wrapper a.center svg .st0{fill:inherit}
 .template-event>aside.top-bar>.wrapper.cap>.wrapper a.center:hover svg{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 .template-event>aside.top-bar>.wrapper.cap>.wrapper a.right{margin:10px 0 0 0}
-@media screen and (min-width:600px){.template-event>aside.top-bar>.wrapper.cap>.wrapper a.right{margin:0 15px}
-}@media screen and (min-width:1200px){.template-event>aside.top-bar>.wrapper.cap>.wrapper a.right{margin:0 30px}
+@media screen and (min-width:600px){.template-event>aside.top-bar>.wrapper.cap>.wrapper a.right{margin:0 15px 0 auto}
+}@media screen and (min-width:1200px){.template-event>aside.top-bar>.wrapper.cap>.wrapper a.right{margin:0 30px 0 auto}
 }.template-event>aside.top-bar>.wrapper.cap>.wrapper a.right:last-child{margin-right:0}
 .template-event>aside.top-bar>.icon-wrapper{height:60px;background-color:black;position:relative}
 .template-event>aside.top-bar>.icon-wrapper.green{background-color:#04a96d}
