@@ -47,7 +47,7 @@ $page_color= get_field("page_color");
                 $twitter_link = get_field("twitter_link","option");
                 $email = get_field("email","option");
                 if($facebook_link||$instagram_link||$twitter_link||$email):?>
-                    <a name="details"></a>
+                    <a name="social"></a>
                     <div class="social">
                         <?php if($facebook_link):?>
                             <a href="<?php echo $facebook_link;?>"><i class="fa fa-facebook"></i></a>
