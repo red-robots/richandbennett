@@ -1498,7 +1498,7 @@ html[xmlns] .flexslider .slides{display:block}
 }.template-page>.wrapper>.wrapper .copy,.template-sitemap>.wrapper>.wrapper .copy,.error-404>.wrapper>.wrapper .copy{margin:20px 0 0 0}
 .template-event>aside.top-bar>.wrapper.cap>.wrapper{padding:20px 0 40px 0;text-align:center;color:black}
 @media screen and (min-width:600px){.template-event>aside.top-bar>.wrapper.cap>.wrapper{padding:15px 5% 30px 5%;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-}@media screen and (min-width:1200px){.template-event>aside.top-bar>.wrapper.cap>.wrapper{padding:15px 5%}
+}@media screen and (min-width:1200px){.template-event>aside.top-bar>.wrapper.cap>.wrapper{padding:15px 5% 25px 5%}
 }.template-event>aside.top-bar>.wrapper.cap>.wrapper.green{color:#04a96d;fill:#04a96d;width:auto;position:relative}
 .template-event>aside.top-bar>.wrapper.cap>.wrapper.green a:before{background-color:#04a96d}
 .template-event>aside.top-bar>.wrapper.cap>.wrapper.orange{color:#fd8906;fill:#fd8906}

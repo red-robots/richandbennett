@@ -156,7 +156,7 @@
                     @include flexbox-justify(center);
                 }
                 @media screen and (min-width: $deskwidth){
-                    padding: 15px 5%;
+                    padding: 15px 5% 25px 5%;
                 }
                 &.green {
                     color: $color__rb-green;

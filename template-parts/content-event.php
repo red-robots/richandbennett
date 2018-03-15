@@ -33,7 +33,6 @@ $page_color= get_field("page_color");
                         <div class="date <?php if($page_color) echo $page_color;?>"><?php echo $date;?></div><!--.date-->
                     <?php endif;?>
                 </header>
-                <a name="details"></a>
                 <div class="copy">
                     <?php the_content();?>
                 </div><!--.copy-->
@@ -72,8 +71,8 @@ $page_color= get_field("page_color");
         <div class="row-2">
             <div class="wrapper cap">
                 <div class="wrapper">
-                    <a name="partners"></a>
                     <?php if($partners_title):?>
+                        <a name="<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($partners_title));?>"></a>
                         <header>
                             <h2><?php echo $partners_title;?></h2>
                         </header>
@@ -105,8 +104,8 @@ $page_color= get_field("page_color");
         <div class="row-3">
             <div class="wrapper cap">
                 <div class="wrapper">
-                    <a name="prepay-events"></a>
                     <?php if($prepay_title):?>
+                        <a name="<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($prepay_title));?>"></a>
                         <header>
                             <h2><?php echo $prepay_title;?></h2>
                         </header>
@@ -124,8 +123,8 @@ $page_color= get_field("page_color");
         <div class="row-4">
             <div class="wrapper cap">
                 <div class="wrapper">
-                    <a name="hotel-info"></a>
                     <?php if($hotel_title):?>
+                        <a name="<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($hotel_title));?>"></a>
                         <header>
                             <h2><?php echo $hotel_title;?></h2>
                         </header>
@@ -171,8 +170,8 @@ $page_color= get_field("page_color");
         <div class="row-5">
             <div class="wrapper cap">
                 <div class="wrapper">
-                    <a name="faqs"></a>
                     <?php if($faq_title):?>
+                        <a name="<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($faq_title));?>"></a>
                         <header>
                             <h2><?php echo $faq_title;?></h2>
                         </header>

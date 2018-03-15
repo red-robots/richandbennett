@@ -15,27 +15,31 @@ $instagram_link = get_field("instagram_link","option");
 $twitter_link = get_field("twitter_link","option");
 $email = get_field("email","option");
 $partners = get_field("partners");
+$partners_title = get_field("partners_title");
 $faq = get_field("faq");
+$faq_title = get_field("faq_title");
 $hotels = get_field("hotels");
+$hotel_title = get_field("hotel_title");
 $prepay_copy = get_field("prepay_copy");
+$prepay_title = get_field("prepay_title");
 $page_color= get_field("page_color");
+$details_title = get_field("details_title");
 ?>
 
 <aside class="top-bar">
 	<div class="wrapper cap">
 		<div class="wrapper <?php if($page_color) echo $page_color;?>">
-			<a class="left" href="#details">Details</a>
-			<?php if($partners):?>
-				<a class="left" href="#partners">Partners</a>
+			<?php if($partners&&$partners_title):?>
+				<a class="left" href="#<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($partners_title));?>"><?php echo $partners_title;?></a>
 			<?php endif;
-			if($prepay_copy):?>
-				<a class="left" href="#prepay-events">Prepay Events</a>
+			if($prepay_copy&&$prepay_title):?>
+				<a class="left" href="#<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($prepay_title));?>"><?php echo $prepay_title;?></a>
 			<?php endif;
-			if($hotels):?>
-				<a class="left" href="#hotel-info">Hotel Info</a>
+			if($hotels&&$hotel_title):?>
+				<a class="left" href="#<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($hotel_title));?>"><?php echo $hotel_title;?></a>
 			<?php endif;
-			if($faq):?>
-				<a class="left" href="#faqs">Faq's</a>
+			if($faq&&$faq_title):?>
+				<a class="left" href="#<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($faq_title));?>"><?php echo $faq_title;?></a>
 			<?php endif;
 			if($button_text&&$button_link):?>
 				<a class="right button" href="<?php echo $button_link;?>">
