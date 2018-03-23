@@ -28,31 +28,74 @@
     <div class="row-3">
         <img src="<?php echo get_template_directory_uri()."/images/city.jpg";?>" alt="Charlotte Skyline">
         <div class="wrapper cap clear-bottom">
-            <div class="box st-pats first">
-                <a href="<?php echo get_permalink(7);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/icon-st-pats.svg";?>" alt="clover">
-                </a>
-            </div><!--.box-->
-            <div class="box halloween">
-                <a href="<?php echo get_permalink(40);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/icon-halloween.svg";?>" alt="pumpkin">
-                </a>
-            </div><!--.box-->
-            <div class="box americrawl">
-                <a href="<?php echo get_permalink(9);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/icon-americrawl.svg";?>" alt="star">
-                </a>
-            </div><!--.box-->
-            <div class="box nye">
-                <a href="<?php echo get_permalink(38);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/icon-nye.svg";?>" alt="glass">
-                </a>
-            </div><!--.box-->
-            <div class="box tubing last">
-                <a href="<?php echo get_permalink(11);?>">
-                    <img src="<?php echo get_template_directory_uri()."/images/icon-tubing.svg";?>" alt="tubing">
-                </a>
-            </div><!--.box-->   
+            <?php $current_date = date('Ymd');
+            $events = array(7,40,9,38,11);
+            $dates = array();
+            foreach($events as $event):
+                $dates[intval(get_field("event_date",$event))?intval(get_field("event_date",$event)):22222222] = $event;
+            endforeach;
+            krsort($dates);
+            $correct_ordered_dates = array();
+            $index = 0;
+            foreach($dates as $date=>$id):
+                if($current_date<= $date):
+                    array_unshift($correct_ordered_dates,$id);
+                else: 
+                    $correct_ordered_dates = array_merge($correct_ordered_dates,array_reverse(array_slice($dates,$index)));
+                    break;
+                endif;
+                $index++;
+            endforeach;
+            $args = array(
+                'post_type'=>'page',
+                'post__in'=>$correct_ordered_dates,
+                'orderby'=>'post__in'
+            );
+            $query = new WP_Query($args);
+            if($query->have_posts()):
+                $i = 0;?>
+                <?php while($query->have_posts()):$query->the_post();
+                    $id = get_the_ID();
+                    $alt = null;
+                    $image = null;
+                    $name = null;
+                    switch($id):
+                        case 7:
+                            $name = "st-pats";
+                            $image = "/images/icon-st-pats.svg";
+                            $alt = "clover";
+                            break;
+                        case 40:
+                            $name = "halloween";
+                            $image = "/images/icon-halloween.svg";
+                            $alt = "pumpkin";
+                            break;
+                        case 9:
+                            $name = "americrawl";
+                            $image = "/images/icon-americrawl.svg";
+                            $alt = "star";
+                            break;
+                        case 38:
+                            $name = "nye";
+                            $alt = "glass";
+                            $image = "/images/icon-nye.svg";
+                            break;
+                        case 11:
+                            $name = "tubing";
+                            $image = "/images/icon-tubing.svg";
+                            $alt = "tubing";
+                            break;
+                    endswitch;?>
+                    <div class="box <?php echo $name;?> <?php if($i == 0) echo "first"; if($i==4) echo "last";?>">
+                        <a href="<?php echo get_permalink($id);?>">
+                            <img src="<?php echo get_template_directory_uri().$image;?>" alt="<?php echo $alt;?>">
+                        </a>
+                    </div><!--.box-->   
+                    <?php $i++;
+                endwhile;?>
+            <?php $post = get_post(5);
+            setup_postdata($post);
+            endif;?>
         </div><!--.wrapper-->
     </div><!--.row-3-->     
 </article><!-- #post-## -->
