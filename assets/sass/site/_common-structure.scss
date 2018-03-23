@@ -204,6 +204,9 @@
 			}
 			&.toggled {
 				display: block;
+				@media screen and (min-width: $tabwidth){
+					@include flexbox();
+				}
 			}
 			>.menu {
 				padding: 40px 0 20px 0;
@@ -311,7 +314,6 @@
 					}
 				}
 				&.tubing {
-					margin-bottom: 0;
 				}
 				&.dots {
 					display: none;
