@@ -1438,6 +1438,7 @@ html[xmlns] .flexslider .slides{display:block}
 }#masthead>.wrapper>.col-2>.box.dots{display:none}
 @media screen and (min-width:600px){#masthead>.wrapper>.col-2>.box.dots{display:block;-webkit-box-flex:0 0 auto;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;width:6%;max-width:30px}
 }#masthead>.wrapper>.col-2>.box a{display:block;color:inherit;text-decoration:none}
+#masthead>.wrapper>.col-2>.box .button{border:0;border-radius:0;box-shadow:none;text-shadow:none;padding:5px 18px;font-size:13px;background:#4fa451;background:-webkit-linear-gradient(left,#4fa451,#2f93a7);background:linear-gradient(to right,#4fa451,#2f93a7)}
 #masthead>.wrapper>.col-2>.box svg{width:100%;vertical-align:bottom;-webkit-transition:all ease .3s;transition:all ease .3s;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
 #masthead>.wrapper>.col-2>.box svg:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 #masthead.index>.wrapper{padding-bottom:0;display:block}

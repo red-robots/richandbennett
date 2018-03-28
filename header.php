@@ -88,9 +88,11 @@ if( is_front_page() ) { ?>
 					endif;
 					$index++;
 				endforeach;
+				$next_id = array_shift($correct_ordered_dates);
+				$next_event_copy = get_field("next_event_copy","option");
 				$args = array(
 					'post_type'=>'page',
-					'post__in'=>$correct_ordered_dates,
+					'post__in'=>array(7,9,11,40,38),
 					'orderby'=>'post__in'
 				);
 				$query = new WP_Query($args);
@@ -124,6 +126,9 @@ if( is_front_page() ) { ?>
 						endswitch;?>
 						<div class="box <?php echo $name;?> <?php if($i == 0) echo "first";?>">
 							<a href="<?php echo get_permalink($id);?>">
+								<?php if($next_event_copy && $id === $next_id):?>
+									<div class="button"><?php echo $next_event_copy;?></div>
+								<?php endif;?>
 								<?php include get_template_directory().$image;?>
 							</a>
 						</div><!--.box--> 

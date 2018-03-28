@@ -28,7 +28,7 @@
     <div class="row-3">
         <img src="<?php echo get_template_directory_uri()."/images/city.jpg";?>" alt="Charlotte Skyline">
         <div class="wrapper cap clear-bottom">
-            <?php $current_date = date('Ymd');
+            <?php /*$current_date = date('Ymd');
             $events = array(7,40,9,38,11);
             $dates = array();
             foreach($events as $event):
@@ -45,10 +45,10 @@
                     break;
                 endif;
                 $index++;
-            endforeach;
+            endforeach;*/
             $args = array(
                 'post_type'=>'page',
-                'post__in'=>$correct_ordered_dates,
+                'post__in'=>array(7,9,11,40,38),
                 'orderby'=>'post__in'
             );
             $query = new WP_Query($args);
