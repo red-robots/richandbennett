@@ -28,7 +28,7 @@
     <div class="row-3">
         <img src="<?php echo get_template_directory_uri()."/images/city.jpg";?>" alt="Charlotte Skyline">
         <div class="wrapper cap clear-bottom">
-            <?php /*$current_date = date('Ymd');
+            <?php $current_date = date('Ymd');
             $events = array(7,40,9,38,11);
             $dates = array();
             foreach($events as $event):
@@ -45,7 +45,9 @@
                     break;
                 endif;
                 $index++;
-            endforeach;*/
+            endforeach;
+            $next_id = array_shift($correct_ordered_dates);
+            $next_event_copy = get_field("next_event_copy","option");
             $args = array(
                 'post_type'=>'page',
                 'post__in'=>array(7,9,11,40,38),
@@ -86,8 +88,11 @@
                             $alt = "tubing";
                             break;
                     endswitch;?>
-                    <div class="box <?php echo $name;?> <?php if($i == 0) echo "first"; if($i==4) echo "last";?>">
+                    <div class="box js-blocks <?php echo $name;?> <?php if($i == 0) echo "first"; if($i==4) echo "last";?>">
                         <a href="<?php echo get_permalink($id);?>">
+                            <?php if($next_event_copy && $id === $next_id):?>
+                                <div class="button"><?php echo $next_event_copy;?></div>
+                            <?php endif;?>
                             <img src="<?php echo get_template_directory_uri().$image;?>" alt="<?php echo $alt;?>">
                         </a>
                     </div><!--.box-->   
