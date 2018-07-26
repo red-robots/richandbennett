@@ -8,7 +8,7 @@
         font-weight: 700;
         text-transform: uppercase;
         @media screen and (min-width: $tabwidth){
-            padding: 8% 0 0 0;
+            padding: 9% 0 0 0;
             font-size: 25px;
         }
     }
@@ -69,7 +69,7 @@
                 @media screen and (min-width: $deskwidth){
                     width: 1/5*88%;
                     margin: 0 1.5%;
-                    float: left;
+                    // float: left;
                 }
                 &:nth-child(even){
                     @media screen and (min-width: $tinywidth) and (max-width: $tabwidth - 1px){
@@ -352,7 +352,7 @@
             text-align: center;
             padding: 60px 0 20px 0;
             @media screen and (min-width: $tabwidth){
-                padding: 8% 0 20px 0;
+                padding: 9% 0 20px 0;
             }
             >.wrapper {
                 @media screen and (min-width: $tabwidth){
