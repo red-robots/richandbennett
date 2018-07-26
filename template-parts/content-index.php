@@ -29,7 +29,7 @@
         <img src="<?php echo get_template_directory_uri()."/images/city.jpg";?>" alt="Charlotte Skyline">
         <div class="wrapper cap clear-bottom">
             <?php $current_date = date('Ymd');
-            $events = array(7,40,9,38,11);
+            $events = array(7,40,9,38);
             $dates = array();
             foreach($events as $event):
                 $dates[intval(get_field("event_date",$event))?intval(get_field("event_date",$event)):22222222] = $event;
@@ -47,10 +47,13 @@
                 $index++;
             endforeach;
             $next_id = array_shift($correct_ordered_dates);
+            // echo '<pre>';
+            // print_r($next_id);
+            // echo '</pre>';
             $next_event_copy = get_field("next_event_copy","option");
             $args = array(
                 'post_type'=>'page',
-                'post__in'=>array(7,9,11,40,38),
+                'post__in'=>array(7,9,40,38),
                 'orderby'=>'post__in'
             );
             $query = new WP_Query($args);
@@ -87,7 +90,13 @@
                             $image = "/images/icon-tubing.svg";
                             $alt = "tubing";
                             break;
-                    endswitch;?>
+                    endswitch;
+
+                    // echo '<pre>';
+                    // echo $next_id . ' && '. $id . ' && '. $next_event_copy;
+                    // echo '</pre>';
+
+                    ?>
                     <div class="box js-blocks <?php echo $name;?> <?php if($i == 0) echo "first"; if($i==4) echo "last";?>">
                         <a href="<?php echo get_permalink($id);?>">
                             <?php if($next_event_copy && $id === $next_id):?>

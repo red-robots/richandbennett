@@ -71,7 +71,7 @@ if( is_front_page() ) { ?>
 			</div><!--.button-wrapper-->
 			<div class="col-2">
 				<?php $current_date = date('Ymd');
-				$events = array(7,40,9,38,11);
+				$events = array(7,40,9,38);
 				$dates = array();
 				foreach($events as $event):
 					$dates[intval(get_field("event_date",$event))?intval(get_field("event_date",$event)):22222222] = $event;
@@ -92,7 +92,7 @@ if( is_front_page() ) { ?>
 				$next_event_copy = get_field("next_event_copy","option");
 				$args = array(
 					'post_type'=>'page',
-					'post__in'=>array(7,9,11,40,38),
+					'post__in'=>array(7,9,40,38),
 					'orderby'=>'post__in'
 				);
 				$query = new WP_Query($args);
