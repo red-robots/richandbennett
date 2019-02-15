@@ -32,7 +32,7 @@ $buy_tickets_now_link= get_field("buy_tickets_now_link");
 <aside class="top-bar">
 	<div class="wrapper cap">
 		<div class="wrapper <?php if($page_color) echo $page_color;?>">
-		<?php if(is_page(231)) : 
+		<?php if(is_page(231) || is_page(683)) : 
 
 			$post = get_post(7); 
 			setup_postdata( $post );
