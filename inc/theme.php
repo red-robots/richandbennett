@@ -14,10 +14,17 @@ function my_login_logo() { ?>
 <style type="text/css">
   body.login div#login h1 a {
   	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
-  	background-size: 327px 67px;
-  	width: 327px;
-  	height: 67px;
+  	background-size: 156px 109px;
+  	width: 156px;
+  	height: 109px;
   }
+  body.login {
+    background-color: #000;
+  }
+  body.login #nav a {
+    color: #fff;
+  }
+
 </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );

@@ -8,6 +8,7 @@
  */
 
 $page_color= get_field("page_color");
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("template-event"); ?>>
