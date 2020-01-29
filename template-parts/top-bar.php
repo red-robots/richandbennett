@@ -7,6 +7,8 @@
  * @package ACStarter
  */
 
+$queried = get_queried_object();
+$postparentId = ( isset($queried->post_parent) && $queried->post_parent ) ? $queried->post_parent : '';
 
 $button_link = get_field("button_link");
 $button_text = get_field("button_text");
@@ -25,18 +27,19 @@ $prepay_title = get_field("prepay_title");
 $page_color= get_field("page_color");
 $details_title = get_field("details_title");
 $buy_tickets_now_link= get_field("buy_tickets_now_link");
-
-
+$subNavs = get_field("subnavs");
 ?>
+
 
 <aside class="top-bar">
 	<div class="wrapper cap">
 		<div class="wrapper <?php if($page_color) echo $page_color;?>">
-		<?php if(is_page(231) || is_page(683)) : 
+
+		<?php if(is_page(231) || is_page(683) ) : 
 
 			$post = get_post(7); 
 			setup_postdata( $post );
-			 
+			 	
 				$partners = get_field("partners");
 				$partners_title = get_field("partners_title");
 				$faq = get_field("faq");
@@ -69,25 +72,63 @@ $buy_tickets_now_link= get_field("buy_tickets_now_link");
 					</a>
 				<?php endif;?>
 
+
 			<?php else: ?>
-		
+
+				<?php 
+				$subNavLink = '#';
+				if ( $postparentId ) { 
+					$partners = get_field("partners",$postparentId);
+					$partners_title = get_field("partners_title",$postparentId);
+					$faq = get_field("faq",$postparentId);
+					$faq_title = get_field("faq_title",$postparentId);
+					$hotels = get_field("hotels",$postparentId);
+					$hotel_title = get_field("hotel_title",$postparentId);
+					$prepay_copy = get_field("prepay_copy",$postparentId);
+					$prepay_title = get_field("prepay_title",$postparentId);
+					$page_color= get_field("page_color",$postparentId);
+					$details_title = get_field("details_title",$postparentId);
+					$buy_tickets_now_link= get_field("buy_tickets_now_link",$postparentId); 
+					$subNavs = get_field("subnavs",$postparentId);
+					$parentObj = get_post($postparentId);
+					$postName = ( isset($parentObj->post_name) && $parentObj->post_name ) ? $parentObj->post_name : '';
+					if($postName) {
+						$subNavLink = get_site_url() . '/' . $postName . '#';
+					}
+				} ?>
+
+				
 				<?php if($partners&&$partners_title):?>
-					<a class="left" href="#<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($partners_title));?>"><?php echo $partners_title;?></a>
+					<a class="left" href="<?php echo $subNavLink ?><?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($partners_title));?>"><?php echo $partners_title;?></a>
 				<?php endif;
 				if($prepay_copy&&$prepay_title):?>
-					<a class="left" href="#<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($prepay_title));?>"><?php echo $prepay_title;?></a>
+					<a class="left" href="<?php echo $subNavLink ?><?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($prepay_title));?>"><?php echo $prepay_title;?></a>
 				<?php endif;
 				if($hotels&&$hotel_title):?>
-					<a class="left" href="#<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($hotel_title));?>"><?php echo $hotel_title;?></a>
+					<a class="left" href="<?php echo $subNavLink ?><?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($hotel_title));?>"><?php echo $hotel_title;?></a>
 				<?php endif;
 				if($faq&&$faq_title):?>
-					<a class="left" href="#<?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($faq_title));?>"><?php echo $faq_title;?></a>
+					<a class="left" href="<?php echo $subNavLink ?><?php echo preg_replace("/[^0-9A-Za-z\-]/","",sanitize_title_with_dashes($faq_title));?>"><?php echo $faq_title;?></a>
 				<?php endif;
 				if($button_text&&$button_link):?>
 					<a class="right button" href="<?php echo $button_link;?>">
 						<?php echo $button_text;?>
 					</a>
 				<?php endif;?>
+
+				<?php if ($subNavs) { ?>
+					<?php foreach ($subNavs as $sn) { 
+						$nav_custom_title = $sn['title'];
+						$navObj = $sn['link'];
+						$navLink = ( isset($navObj->ID) && $navObj->ID ) ? get_permalink($navObj->ID) : '';
+						$navTitle = ( isset($navObj->post_title) && $navObj->post_title ) ? $navObj->post_title : '';
+						if($nav_custom_title) {
+							$navTitle = $nav_custom_title;
+						}
+						?>
+						<a class="left" href="<?php echo $navLink ?>"><?php echo $navTitle;?></a>
+					<?php } ?>
+				<?php } ?>
 
 			<?php endif; ?>
 		</div><!--.wrapper-->
